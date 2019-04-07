@@ -1,6 +1,21 @@
 // full merge sort
 
-function mergeArrays(arr1, arr2){
+function mergeSort(arr){
+    // base case
+    if (arr.length <= 1) {
+        return arr
+    }
+    // break up the array into halves until you have arrays that are empty or have one element
+
+    let halfValue = Math.floor(arr.length / 2);
+    let firstHalf = mergeSort(arr.slice(0, halfValue));
+    let lastHalf = mergeSort(arr.slice(halfValue));
+    //once you have smaller sorted arrays, merge those arrays with other sorted arrays until you are back at the full length of the array
+    // once the array has been merged back together, return the merged (and sorted) array
+    return merge(firstHalf, lastHalf)
+}
+
+function merge(arr1, arr2){
     //create an empty array
     let newArr = []
     // take a look at the smallest values in each input array
@@ -8,7 +23,6 @@ function mergeArrays(arr1, arr2){
     let j = 0
     // while there are still values we haven't looked at...
     while (i< arr1.length && j < arr2.length) {
-            // console.log(newArr)
         // if the value in the first array is smaller than the value in the second
             // array, push the value in the first array into our results and move on to
             // the next value in the first array
@@ -34,4 +48,4 @@ function mergeArrays(arr1, arr2){
     return newArr
 }
 
-console.log(mergeArrays([1, 4, 7, 9], [2, 3, 5, 6, 12, 13, 17]))
+console.log(mergeSort([2, 7, 3, 5, 10, 6, 12, 13, 20, 17]))
