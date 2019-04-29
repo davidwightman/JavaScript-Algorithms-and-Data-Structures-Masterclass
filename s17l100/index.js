@@ -16,6 +16,16 @@ function mostDigits(nums) {
 }
 
 function radixSort(arr){
+    const maxDigitCount = mostDigits(arr);
+
+    for (let k = 0; k < maxDigitCount; k++) {
+        let digitBuckets = Array.from({length: 10}, () => [])
+        for (let i = 0; i < arr.length; i++) {
+            digitBuckets[getDigit(arr[i], k)].push(arr[i]);
+        }
+        arr = [].concat(...digitBuckets)
+    }
+    return arr;
     //figure out how many digits the largest number has
     //loop from k=0 up to this largest number of digits
    // for each iteration of the loop:
@@ -24,3 +34,5 @@ function radixSort(arr){
     // replace exisiting array with values in our bucket starting with 0 and going up to 9
     // return list at the end
 }
+
+console.log(radixSort([4, 20000, 20, 50,40, 400, 4000]))
