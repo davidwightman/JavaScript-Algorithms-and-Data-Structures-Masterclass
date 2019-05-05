@@ -49,8 +49,62 @@ class SinglyLinkedList {
         }
         // return the value of the node removed
         return current;
+    }
+    shift() {
+        // if no nodes return undefined
+        if (!this.head){ return undefined}
+        // store the current head property in a variable
+        let current = this.head;
+        // set the head property to be the current head's next prperty
+        this.head = current.next;
+        // decrement the length by 1 
+        this.length--;
+        if (this.length === 0 ) {
+            this.tail = null;
+        }
+        // return the value of the node removed
+        return current;
+    }
+    unshift(val){
+        //create a new  node using the value passed to the function
+        let newNode = new Node(val)
+        // if there is no head on the list, set the head and tail to be the newly created node
+        if (!this.head) {
+            this.head = newNode;
+            this.tail = newNode;
+        // otherwise set the newly created node's next property to be the current head property on the list
+        } else {
+            newNode.next = this.head
+        // set the head on the list to be that newly created noded
+            this.head = newNode
+        }
+        // increment length
+        this.length++;
+        // return linked list
+        return this;
 
-
+    }
+    get(index){
+        // if index is less than zero or greater than or equal to the length of the list, return null
+        if (index < 0 || index >= this.length) { return null }
+        // loop through the list until you reach the index and return the node at that specific index
+       var counter = 0;
+       var current = this.head;
+       while (counter !== index){
+           current = current.next;
+           counter++
+       }
+       return current;
+    }
+    set(index, value){
+        // use get method to find the specifice node
+        let findIndex = this.get(index)
+        // if the node is not found, return false
+        if (findIndex) { return false } else {
+        // if the node is found, set the value of that node to be the value passed to the function and return true
+            findIndex.val = value
+            return true
+        }
     }
     traverse(){
         var current = this.head;
@@ -67,5 +121,4 @@ list.push("GOODBYE")
 list.push("!!!")
 
 
-list.pop()
-console.log(list)
+console.log(list.get(1))
