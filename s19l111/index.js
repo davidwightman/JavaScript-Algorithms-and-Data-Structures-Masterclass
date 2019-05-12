@@ -146,13 +146,23 @@ class SinglyLinkedList {
     }
     reverse (){
         // swap the head and tail
-        let temp
-        this.head = temp
-        this.tail = this.head
-        this.head = this.temp
-        let next;
-        let prev;
-        let nod = this.head
+        let node = this.head;
+        this.head = this.tail
+        this.tail = node
+        let next = null;
+        let prev = null;
+        // loop through the list
+        for (let i = 0; i < this.length; i++) {
+        // set the next to be the next property on whatever node is
+            next = node.next;
+        // set the next property on the node to be whatever the prev is
+            node.next = prev;
+        // set the prev to be the value of the node varialbe
+            prev = node;
+        // set the node variable to be the value of the next variable
+            node = next;
+        }
+        return this;
     }
     traverse(){
         var current = this.head;
