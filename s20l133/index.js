@@ -104,6 +104,36 @@ class DoublyLinkedList{
         // return the list
         return this;
     }
+
+    get (index) {
+        // if the index is less than 0 or greater or equal to the the length, return null
+        if (index < 0 || index >= this.length) return null
+        //if the index is less than or equal to half the length of the list 
+        if (index <= this.length / 2) {
+            var count = 0;
+            var current = this.head;
+            while (count !== index){
+                current = current.next;
+                count++;
+            }
+        //   - loop through the list starting from the head and loop towards the middle
+        //   - return the node once it is found
+        } else {
+            var count = this.length - 1
+            var current = this.tail;
+            while (count !== index){
+                current = current.prev;
+                count--;
+            }
+// if the index is greater than half the length of the list 
+        //   - loop through the list starting from the tail and loop towards the middle
+            //   - return the node once it is found
+             
+        //   - return the node once it is found
+        }
+        return current;
+
+    }
 }
 
 list = new DoublyLinkedList()
