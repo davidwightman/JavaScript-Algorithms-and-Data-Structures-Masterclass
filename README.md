@@ -66,3 +66,34 @@ Lists are linear (one path). Trees are nonlinear (more than one path).
     -- eventy node to the right is greater than the parent
 - Heaps
 
+#### Big O of Binary Search Trees
+Insertion - O(log n)
+Searching - O(log n)
+
+### Tree Traversal
+
+visit every node once
+
+#### two ways
+breadth first
+vs
+- depth first
+    - InOrder
+    - PreOrder
+    - PostOrder 
+
+#### when to use BFS or DFS
+
+time complexity is the same
+
+breadth first uses a lot of space with the queue
+
+depth first does not store all of these thing
+
+breadth first is good for list-like trees
+
+//
+
+InOrder - will give you all nodes in lowest to highest order
+
+PreOrder - you can recreate the list as you have the root first
