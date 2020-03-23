@@ -97,3 +97,26 @@ breadth first is good for list-like trees
 InOrder - will give you all nodes in lowest to highest order
 
 PreOrder - you can recreate the list as you have the root first
+
+### Binary Heaps
+
+Heap is a tree.
+
+Very similar to a binary search tree, but with different rules.
+In a MaxBinaryHeap, parent nodes are always larger than child nodes.
+In a MinBinaryHeap, parent nodes are always smaller than child nodes.
+Each parent has at most to child nodes.
+the value of each parent node is always greater than its child nodes.
+a binary heap is as compact as possible. All the children of each node are as full as they can be and left children are filled out first
+
+#### Big O of Binary Heaps
+
+Insertion - O(log N)
+Removal - O(log N)
+Search - O(N)
+
+#### Priority Queue
+A data structure where each element has a priority. Elements with higher priorities are served before elements with lower priorities.
+
+
+
