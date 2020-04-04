@@ -122,5 +122,34 @@ Search - O(N) - not good for search because no clear relationship between childr
 #### Priority Queue
 A data structure where each element has a priority. Elements with higher priorities are served before elements with lower priorities.
 
+### Hash Tables
+
+- hash tables are used to store key-value pairs
+- they are like arrays, but the keys are not ordered
+- unlike arrays, hash tables are fast for all of the following operations: finding values, adding new values, and removing values
+
+#### Implementation
+
+- we will use an array
+- in order to look up values by key, we need a way to convert keys into valid array indices
+- a function that performs this task is called a hash function
+
+#### What makes a good hash function?
+
+- Fast (i.e. constant time)
+- Doesn't cluster outputs at specific indices, but distributes uniformly
+- Deterministic (same input yields same output)
+
+#### How to handle collisions 
+
+1. seperate chaining
+    - at each index in our array we store values using a more sophisticated data structure (like an array or a linked list)
+2. linear probing
+    - when we find a collision we search through the array to find the next empty slot
+
+
+
+
+
 
 
