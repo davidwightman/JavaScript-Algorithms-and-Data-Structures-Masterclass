@@ -25,9 +25,41 @@ class HashTable {
     _get(key) {
         let index = this._hash(key);
         if(this.keyMap[index]){
-
+            for (let i = 0; i < this.keyMap[index].length; i++) {
+                if (key === this.keyMap[index][i][0]) {
+                    return this.keyMap[index][i][1]
+                }
+            }
         }
         return undefinedcd
+    }
+
+    _keys() {
+        let keysArr = []
+        for (let i =0; i < this.keyMap.length; i++) {
+            if (this.keyMap[i]) {
+                for (let j =0; j < this.keyMap[i].length; j++) {
+                    if (!keysArr.includes(this.keyMap[i][j][0])){
+                        keysArr.push(this.keyMap[i][j][0])
+                    }
+                } 
+            }
+        }
+        return keysArr;
+    }
+
+    _values() {
+        let valuesArr = []
+        for (let i =0; i < this.keyMap.length; i++) {
+            if (this.keyMap[i]) {
+                for (let j =0; j < this.keyMap[i].length; j++) {
+                    if (!valuesArr.includes(this.keyMap[i][j][1])){
+                        valuesArr.push(this.keyMap[i][j][1])
+                    }
+                } 
+            }
+        }
+        return valuesArr;
     }
   }
   

@@ -40,7 +40,7 @@ Access - O(N)
 
 ### Trees
 
-Definition - A data structure that consisits of nodes in a parent/child relationship.
+Definition - A data structure that consists of nodes in a parent/child relationship.
 
 Lists are linear (one path). Trees are nonlinear (more than one path).
 
@@ -107,7 +107,7 @@ Very similar to a binary search tree, but with different rules.
 In a MaxBinaryHeap, parent nodes are always larger than child nodes.
 In a MinBinaryHeap, parent nodes are always smaller than child nodes.
 
-Each parent has at most to child nodes.
+Each parent has at most two child nodes.
 the value of each parent node is always greater than its child nodes.
 a binary heap is as compact as possible. All the children of each node are as full as they can be and left children are filled out first
 
@@ -142,10 +142,16 @@ A data structure where each element has a priority. Elements with higher priorit
 
 #### How to handle collisions 
 
-1. seperate chaining
+1. separate chaining
     - at each index in our array we store values using a more sophisticated data structure (like an array or a linked list)
 2. linear probing
     - when we find a collision we search through the array to find the next empty slot
+
+#### Big O of Hash Tables
+
+- Insert: O(1)
+- Deletion: O(1)
+- Access: O(1)
 
 
 
