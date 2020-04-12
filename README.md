@@ -153,6 +153,49 @@ A data structure where each element has a priority. Elements with higher priorit
 - Deletion: O(1)
 - Access: O(1)
 
+### Graphs
+
+#### What is a Graph
+
+collection of nodes and collection between those nodes
+
+A tree is a type of a graph
+
+#### Real world examples
+
+Social Networks
+Location/Mapping
+Routing Algorithms
+Visual Hierarchy
+File System Optimizations
+
+#### Essential Graph terms
+
+vertex - a node
+edge - connection between nodes
+weighted/unweighted - values assigned to distances between vertices
+directed/undirected - directions assigned to distanced between 
+
+Undirected graphs - no direction between edges
+Directed graph - direction assigned to edge (can also be bi-directional)
+Weighted Graph - has value associated with 
+
+#### Adjacency Matrix
+
+use matrix to store the relationships between vertexes
+
+#### Adjacency List
+
+use array or hashmap to store the edges 
+
+#### Different types of graphs
+
+
+
+
+
+
+
 
 
 
