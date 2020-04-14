@@ -182,13 +182,19 @@ Weighted Graph - has value associated with
 
 #### Adjacency Matrix
 
-use matrix to store the relationships between vertexes
+- use matrix to store the relationships between vertexes
+- takes up more space (in sparse graphs)
+- slower to iterate over all edges
+- faster to lookup specific edge
 
 #### Adjacency List
 
-use array or hashmap to store the edges 
+- use array or hashmap to store the edges 
+- Can take up less space (in sparse graphs)
+- faster to iterate over all edges
+- can be slower to look up specific edge
 
-#### Different types of graphs
+
 
 
 

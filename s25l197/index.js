@@ -8,3 +8,9 @@ function hash (key, arrayLen) {
 }
 
 console.log(hash("pink", 10))
+
+/*
+- only hashes strings
+- not constant time - linear in key length
+- could be a little more random
+*/
