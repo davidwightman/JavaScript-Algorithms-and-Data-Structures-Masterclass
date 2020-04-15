@@ -153,13 +153,15 @@ A data structure where each element has a priority. Elements with higher priorit
 - Deletion: O(1)
 - Access: O(1)
 
+///// CONTINUE FLASH CARDS
+
 ### Graphs
 
 #### What is a Graph
 
 collection of nodes and collection between those nodes
 
-A tree is a type of a graph
+A tree is a type of a graph where there is only one path to get to any given node 
 
 #### Real world examples
 
@@ -194,17 +196,19 @@ Weighted Graph - has value associated with
 - faster to iterate over all edges
 - can be slower to look up specific edge
 
+#### Graph Traversal Usese
 
+- peer to peer networking
+- web crawlers
+- finding "closest" matches and recommendations
+- shortest path problems
+- GPS navigation
+- solving mazes
+- AI (shortest path to win the game)
 
+#### Depth First Graph Traversal
 
-
-
-
-
-
-
-
-
-
-
+For trees:
+"Children before siblings"
+"Deepen before we widen"
 

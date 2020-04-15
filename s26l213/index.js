@@ -17,4 +17,14 @@ class Graph {
         const index1 = this.adjacencyList[vert2].indexOf(vert1);
         this.adjacencyList[vert2] = this.adjacencyList[vert2].splice(index1, 1);
     }
+
+    removeVertex(vert) {
+        // call remove edge in loop
+        while(this.adjacencyList[vert].length) {
+            const adjacencyVertex = this.adjacencyList[vert].pop()
+            this.removeEdge(vert, adjacencyVertex)
+        }
+        // remove vertex
+        delete this.adjacencyList[vert]
+    }
 }
