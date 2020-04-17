@@ -27,4 +27,31 @@ class Graph {
         // remove vertex
         delete this.adjacencyList[vert]
     }
+
+    DFSrecursive(start) {
+        // create a list to store the end result, to be returned at the very end
+        const result = []
+        const visited = {}
+        // create an object to store visited vertices
+        // create a helper function which accepts a vertex
+        // - the helper function should return early if the vertex is empty
+        // - the helper function should place the vertex it accepts into the visited object and push that vertex into the result array.
+        // - loop over all of the values in the adjacenyList for that vertex
+        // - if any of those values have not been visited, recursively invoke the helper function with that vortex
+        const adjacencyList = this.adjacencyList;
+        (function dfs(vertext){
+            if(!vertex) return null;
+            visited[vertex] = true;
+            result.push(vertex);
+            adjacencyList[vertex].forEach(neighbor => {
+                if (visited[neighbor]){
+                    return dfs(neighbor)
+                }
+            });
+        // invoke the helper function with the starting vertex
+        })(start);
+    
+        // return the result array
+        return result
+    }
 }
