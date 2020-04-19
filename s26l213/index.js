@@ -28,7 +28,7 @@ class Graph {
         delete this.adjacencyList[vert]
     }
 
-    DFSrecursive(start) {
+    DepthFirstSeachRecursive(start) {
         // create a list to store the end result, to be returned at the very end
         const result = []
         const visited = {}
@@ -55,7 +55,52 @@ class Graph {
         return result
     }
 
-    DFSiterative(start) {
-        // 
+        // the function should accept a starting node
+    DepthFirstSearchIterative(start) {
+        // create a stack to help use keep track of verticies (use a list/array)
+        const S = []
+        // create a list to store the end result, to be returned at the very end
+       const resultList = []
+        // create an object to store visited vertices
+        const visitedVertices = {}
+        // add the starting vertex to the stack and mark it visited
+        S.push(start)
+        visitedVertices[start] = true;
+        //while the stack has something in it:
+        while (S.length !== 0){
+            // - pop the next vertex from the stack
+            let lastVert = S.pop();
+            // -- add it to the result list 
+            resultList.push(lastVert)
+            // -- push all of its neighbors int the stack
+            this.adjacencyList[lastVert].forEach(n => {
+                if (!visitedVertices[n]) {
+                    // -- mark it as visited
+                    visitedVertices[n] = true
+                    S.push(n)
+                }
+            });
+        }
+        return resultList
+    }
+
+    BreadthFirstSearch (start) {
+        const queue = [start];
+        const resultArray = [];
+        const visited = {};
+        visited[start] = true;
+
+        while (queue.length) {
+            let first = queue.shift();
+            resultArray.push(first);
+
+            this.adjacencyList[first].forEach(n => {
+                if (!visited[n]){
+                    visited[n] = true;
+                    queue.push(n);
+                }
+            });
+        }
+        return resultArray;
     }
 }
