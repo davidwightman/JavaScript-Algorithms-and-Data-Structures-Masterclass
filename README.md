@@ -4,6 +4,26 @@ Working through the exercises.
 
 ## Notes
 
+### Recursion
+A process (a function in our case) that calls itself
+
+#### Where is recursion used
+
+- JSON.parse / JSON.stringify
+- document.getElementById and dom traversal algorithms
+- object traversal
+- used in trees and graphs
+- a cleaner alternative to iteration
+
+#### The call stack
+- pushed on and popped off
+
+#### The base case
+- where the recusion stops
+- almost always involves a conditional
+
+// Started notes
+
 ### Stack
 
 #### LIFO structure
