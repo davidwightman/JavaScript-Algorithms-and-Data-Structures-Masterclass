@@ -22,7 +22,24 @@ A process (a function in our case) that calls itself
 - where the recusion stops
 - almost always involves a conditional
 
-// Started notes
+#### Recursion pitfalls
+- no basecase or basecase is wrong
+- forgetting to return or returning the wrong thing (not changing what is being recursively called)
+- stack overflow
+
+#### Helper Method recursion pattern
+- outer function contains inner recursive function
+- incapsulation
+- good for compiling an array or object that is returned at the end. For example, inner recursive function pushes data into result array which is  returned at the end
+
+#### Pure recursion
+- for arrays, use methods like slice, the spread operator, and concat that make copies of arrays so you do not mutate them
+- remember that string are immutable so you will need to use methods like slice, substr, or substring to make copies of string
+- to make copies of objects use Object.assign or the spread operator
+
+
+
+// Started flashcards
 
 ### Stack
 
