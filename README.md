@@ -4,6 +4,10 @@ Working through the exercises.
 
 ## Notes
 
+### Big O Notation
+
+
+
 ### Recursion
 A process (a function in our case) that calls itself
 
