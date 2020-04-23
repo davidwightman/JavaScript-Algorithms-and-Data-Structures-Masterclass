@@ -6,7 +6,16 @@ Working through the exercises.
 
 ### Big O Notation
 
-
+- count number of simple operations the computer has to perform
+```
+// three operations below O(1)
+function addUpTo(n) {
+    return n * (n +1 ) / 2
+}
+```
+- how the runtime of an algorithm grows as the inputs grow
+- two loops in a function would be O(n)
+- a loop inside a loop (nested loop) in a functions would be O(n^2)
 
 ### Recursion
 A process (a function in our case) that calls itself
