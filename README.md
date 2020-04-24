@@ -17,6 +17,36 @@ function addUpTo(n) {
 - two loops in a function would be O(n)
 - a loop inside a loop (nested loop) in a functions would be O(n^2)
 
+### Big O Rules for simplifying expressions
+
+- Constants don't matter
+```
+O(2n) => O(n)
+O(500) => O(1)
+O(13n^2) => O(n^2)
+```
+- Smaller terms don't matter
+```
+O(n^2 + 5n + 8) => O(n^2)
+```
+
+### Space Complexity
+- most primitives (booleans, numbers, undefined, null) are constant space
+- Stings require O(n) space (where n is the string length)
+- Reference types are generally O(n), where n is the length (for arrays) or the number of keys (for objects)
+
+```
+// example of O(1) space complexity
+function sum(arr) {
+    let total = 0;
+    for (let i = 0; i < arr.length; i++) {
+        total += arr[i];   
+    }
+    return total;
+}
+```
+
+
 ### Recursion
 A process (a function in our case) that calls itself
 
