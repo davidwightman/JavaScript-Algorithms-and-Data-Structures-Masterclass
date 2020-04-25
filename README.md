@@ -46,6 +46,46 @@ function sum(arr) {
 }
 ```
 
+### logarithms
+- logarithms are inverse of exponentiation
+- the logarithm of a number roughly measures the number of times you can divide that number by 2 before you get a value that's less or equal to one
+- logarithmic time complexity is great, right above O(1)
+
+### example of logarithms
+- certain searching algorithms have logarithmic time complexity
+- efficient sorting algorithms involve logarithms
+- recursion sometimes involves logarithmic space complexity
+
+### Big O of Objects
+- Good for when you don't need order. Objects have fast access/insertion and removal
+- Insertion, Removal, Access is O(1)
+- Searching (gettting the value) is O(N)
+- Object Methods:
+```
+Object.keys // O(N)
+Object.values // O(N)
+Object.entries // O(N)
+hasOwnProperty // O(1)
+```
+
+### Big O of Arrays
+- When you need order. when you need fast acces/insertion and removal (sort of...)
+- Access is O(1) (like objects) (when you ask for namesArr[2])
+- Searching is O(N) ("is 'David' in namesArr?")
+- Insertion and Removal depends...the end is easy, but the beginning is different because everything has to be reindexed 
+- push and pop are faster than shift and unshift
+- Array Methods:
+```
+push // O(1)
+pop // O(1)
+shift // O(N)
+unshift // O(N)
+concat // O(N)
+slice // O(N)
+splice // O(N)
+sort // O(N * log N)
+forEach/map/filter/reduce // O(N)
+```
 
 ### Recursion
 A process (a function in our case) that calls itself
