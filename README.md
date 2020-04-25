@@ -120,6 +120,18 @@ A process (a function in our case) that calls itself
 - remember that string are immutable so you will need to use methods like slice, substr, or substring to make copies of string
 - to make copies of objects use Object.assign or the spread operator
 
+## Searching Algorithms
+
+### Linear Searching
+-  given an array, the simplest way to search for a value is to look at every element in the array and check if it's the value we want
+- Array methods that use linear search: indexOf, includes, find, findIndex
+- Big O of Linear Search is O(n)
+
+### Binary Search
+- Binary search is a much faster form of search
+- Rather than eliminating one element at a time, you can eliminate half of the remaining elements at a time
+- Binary Search only works on sorted arrays
+- Divide and Conquer
 
 
 // Started flashcards
