@@ -132,6 +132,12 @@ A process (a function in our case) that calls itself
 - Rather than eliminating one element at a time, you can eliminate half of the remaining elements at a time
 - Binary Search only works on sorted arrays
 - Divide and Conquer
+- Big O
+worst case and average case: O(log n) // very good! almost as good as O(1)
+best case: O(1)
+
+### Naive String Search
+- count the number of times a number of smaller string appears in a larger string
 
 
 // Started flashcards
