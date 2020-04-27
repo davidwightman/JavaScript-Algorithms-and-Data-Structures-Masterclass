@@ -139,6 +139,23 @@ best case: O(1)
 ### Naive String Search
 - count the number of times a number of smaller string appears in a larger string
 
+### Sorting Algorithms
+
+#### JavaScript Sort method
+- the default sort order is according to string Unicode points (every item is converted to string and then they're sorted by Unicode)
+- accepts an optional comparator function
+```
+function numberCompare(num1, num2) {
+    return num1 - num2;
+}
+[6,4,15,10].sort(numberCompare); // [4,6,10,15]
+```
+
+#### Buble sort
+- A sorting algorithm where the largest values bubble up to the top
+
+#### Selection sort
+#### Insertion sort
 
 // Started flashcards
 
